@@ -49,6 +49,17 @@ pub struct MakeOffer <'info> {
     pub associated_token_program: Program<'info, AssociatedToken>,
 }
 
+// pub fn send_offered_tokens_to_vault(ctx: Context<MakeOffer>, token_a_offered_amount: u64) -> Result<()> {
+//     transfer_tokens(
+//         &ctx.accounts.maker_token_account_a,
+//         &ctx.accounts.vault,
+//         &token_a_offered_amount,
+//         &ctx.accounts.token_mint_a,
+//         &ctx.accounts.maker,
+//         &ctx.accounts.token_program,
+//     )
+// }
+
 pub fn send_offered_tokens_to_vault(ctx: Context<MakeOffer>) -> Result<()> {
     msg!("Greetings from: {:?}", ctx.program_id);
     Ok(())
